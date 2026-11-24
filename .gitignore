@@ -1,4 +1,5 @@
 node_modules/
 .next/
 .env*.local
+.streamlit/secrets.toml
 *.log
