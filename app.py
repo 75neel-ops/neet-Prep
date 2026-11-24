@@ -173,7 +173,7 @@ elif page == "Past papers":
     st.subheader("Official and freely available study materials")
     st.info("Download or view files from the issuing organization. External archive pages and download permissions can change.")
     st.markdown("#### NEET exam papers, answer keys and announcements")
-    st.markdown("- [NTA NEET official portal](https://neet.nta.nic.in/)\n- [NTA exam portal for NEET](https://exams.nta.ac.in/NEET/)")
+    st.markdown("- [NEET previous-year question papers — official NTA archive](https://neet.nta.nic.in/archive/)\n- [NEET official answer keys — official NTA archive](https://neet.nta.nic.in/archive/)")
     st.markdown("#### NCERT textbooks")
     st.markdown("- [Official NCERT textbook PDFs](https://ncert.nic.in/textbook.php)\n- [NCERT e-books](https://ncert.nic.in/ebooks.php?ln=en)")
 
