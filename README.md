@@ -1,36 +1,36 @@
-# NEETPrep (Streamlit)
+# NEETPrep — browser-based NEET study app
 
-A browser-based NEET preparation app with AI-generated, NCERT-aligned practice questions. You do not need to install anything on your computer: deploy this GitHub repository on Streamlit Community Cloud and use the website it gives you.
+This repository is deployed as a Streamlit app. You do not need to install software on your computer to use the hosted app.
 
-## Deploy it in your browser
+## Deploy / update the hosted app
 
-1. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/) with GitHub.
-2. Select **Create app** and choose the `75neel-ops/neet-Prep` repository, the `main` branch, and `app.py` as the main file.
-3. Before launching, open the app's **Advanced settings → Secrets** and paste one provider's settings (replace the example text with your own API key):
+Changes pushed to the `main` branch are normally picked up by the Streamlit deployment. If the page does not update, open the app's Streamlit Cloud dashboard and choose **Reboot app**.
 
-   For OpenAI:
-   ```toml
-   AI_PROVIDER = "openai"
-   OPENAI_API_KEY = "paste-your-OpenAI-key-here"
-   OPENAI_MODEL = "gpt-4o-mini"
-   ```
+To deploy it yourself, sign in at [Streamlit Community Cloud](https://share.streamlit.io/), choose **Create app**, select this repository and the `main` branch, and set the main file to `app.py`. Add a provider key in **Advanced settings → Secrets** before using AI features:
 
-   Or for Gemini:
-   ```toml
-   AI_PROVIDER = "gemini"
-   GEMINI_API_KEY = "paste-your-Gemini-key-here"
-   GEMINI_MODEL = "gemini-2.0-flash"
-   ```
+OpenAI:
+```toml
+AI_PROVIDER = "openai"
+OPENAI_API_KEY = "your-key"
+OPENAI_MODEL = "gpt-4o-mini"
+```
 
-4. Click **Deploy**. When deployment finishes, open the Streamlit URL shown on the page.
-5. In the app, select **Practice test**, choose a subject and chapter, then click **Generate my test**.
+Or Gemini:
+```toml
+AI_PROVIDER = "gemini"
+GEMINI_API_KEY = "your-key"
+GEMINI_MODEL = "gemini-2.0-flash"
+```
 
-You can also add or edit secrets later from the app's Streamlit Cloud settings. Keep API keys in the Streamlit Secrets settings—never paste them into source code, a public chat, or a committed file. AI providers may charge for API use.
+Keep keys only in Streamlit Secrets; never commit them to GitHub or share them in chat. Your AI provider may charge for API use.
 
-## Run locally (optional)
+## Available sections
 
-You do not need to do this to use the hosted app. If you choose to run it locally, install Python, then run `pip install -r requirements.txt` and `streamlit run app.py`.
+- **NCERT chapters:** AI-generated chapter overviews and revision guidance.
+- **Chapter keywords:** AI-generated key terms and explanations.
+- **Past papers:** links to official NTA and NCERT websites; download files from their source pages.
+- **Mock exams:** chapter-wise or selected-subject/full-syllabus practice, selectable timer and marking settings, score and answer explanations.
+- **Ask NCERT:** AI study answers guided by the selected subject and chapter.
+- **Videos & news:** YouTube chapter searches and official NTA update links.
 
-## About the questions
-
-Questions are AI-generated practice material and are not claimed to be real or past NEET exam questions. Please verify important information against current NCERT materials.
+Generated questions are practice material, not actual previous-year NEET questions. Past-paper links point to source websites because availability and reuse permissions vary. The app does not claim to predict All India Rank: a trustworthy estimate requires real comparable exam/candidate data.
