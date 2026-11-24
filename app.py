@@ -8,7 +8,7 @@ from typing import Any
 import requests
 import streamlit as st
 
-st.set_page_config(page_title="NEETPrep", page_icon="📘", layout="wide")
+st.set_page_config(page_title="NEETPrep by NilanjanC", page_icon="📘", layout="wide")
 
 SUBJECTS = ["Physics", "Chemistry", "Biology", "Mathematics"]
 CHAPTERS = {
@@ -114,6 +114,7 @@ with st.sidebar:
     page = st.radio("Go to", PAGES, key="nav", label_visibility="collapsed")
     st.divider()
     st.caption("NEET preparation • Class 11 & 12")
+    st.caption("App owner: **NilanjanC**")
 
 st.title(page)
 st.caption("NCERT-guided preparation. AI-generated questions are practice material, not authentic past-paper questions.")
